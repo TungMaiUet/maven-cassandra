@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+encoding//src/main/java/com/db/cassandra/InsertAuthor.java=UTF-8
+encoding//src/main/java/com/db/cassandra/InsertBook.java=UTF-8
+encoding//src/main/java/com/db/cassandra/InsertCategory.java=UTF-8
+encoding//src/main/java/com/db/cassandra/InsertStore.java=UTF-8

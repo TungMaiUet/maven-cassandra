@@ -97,7 +97,7 @@ public class InsertBook implements Runnable {
 		ResultSet rs;
 		Random random = new Random();
 		// int id = 1000000 * threadCount;
-		for (int count = 2130000; count <= 10000000; count++) {
+		for (int count = 6730000; count <= 10000000; count++) {
 			String insertValueBook = "";
 			String insertValueBookByAuthor = "";
 			String insertValueBookByCategory = "";

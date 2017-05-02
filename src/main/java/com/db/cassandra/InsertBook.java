@@ -97,7 +97,7 @@ public class InsertBook implements Runnable {
 		ResultSet rs;
 		Random random = new Random();
 		// int id = 1000000 * threadCount;
-		for (int count = 6730000; count <= 10000000; count++) {
+		for (int count = 1; count <= 10000000; count++) {
 			String insertValueBook = "";
 			String insertValueBookByAuthor = "";
 			String insertValueBookByCategory = "";
@@ -110,24 +110,6 @@ public class InsertBook implements Runnable {
 
 			String category = "";
 			UUID categoryId = null;
-			// id++;
-			// rs = statement.executeQuery(
-			// "SELECT b.*,l.name AS language_name,c.name AS category_name FROM
-			// books b JOIN language l ON b.language_id=l.language_id JOIN
-			// category c ON b.category_id=c.category_id WHERE b.book_id="
-			//// + id);
-			// while (rs.next()) {
-			// id = rs.getInt("book_id");
-			// String nameTemp = removeAccent(rs.getString("name"));
-			// name = nameTemp.replace("'", "''");
-			// String descriptionTemp =
-			// removeAccent(rs.getString("description"));
-			// description = descriptionTemp.replace("'", "''");
-			// publicationDate = rs.getDate("publication_date");
-			// language = rs.getString("language_name");
-			// category = removeAccent(rs.getString("category_name"));
-			//
-			// }
 			int countAuthor = random.nextInt(4) + 1;
 			String authors = "";
 			for (int ath = 0; ath < countAuthor; ath++) {
@@ -193,9 +175,4 @@ public class InsertBook implements Runnable {
 
 	}
 
-	public static String removeAccent(String s) {
-		String temp = Normalizer.normalize(s, Normalizer.Form.NFD);
-		Pattern pattern = Pattern.compile("\\p{InCombiningDiacriticalMarks}+");
-		return pattern.matcher(temp).replaceAll("");
-	}
 }
